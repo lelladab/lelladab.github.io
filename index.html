@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MY_PROJECT.EXE | THE FUTURE IS HERE</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700;900&amp;family=Inter:wght@400;700&amp;family=Courier+New:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-highest": "#e3e2e2",
+                      "on-primary": "#ffffff",
+                      "inverse-surface": "#2f3131",
+                      "primary-fixed": "#e0e0ff",
+                      "error": "#ba1a1a",
+                      "on-background": "#1a1c1c",
+                      "error-container": "#ffdad6",
+                      "primary-container": "#000080",
+                      "inverse-primary": "#bfc2ff",
+                      "secondary-fixed-dim": "#bec2ff",
+                      "tertiary-fixed-dim": "#ffaaf3",
+                      "on-tertiary-container": "#d059c9",
+                      "surface-container-high": "#e8e8e8",
+                      "inverse-on-surface": "#f1f0f0",
+                      "surface-container": "#eeeeee",
+                      "surface-bright": "#faf9f9",
+                      "on-primary-container": "#777eea",
+                      "tertiary": "#1c001c",
+                      "surface-tint": "#4b53bc",
+                      "outline": "#767684",
+                      "on-secondary-fixed": "#00006e",
+                      "on-primary-fixed": "#00006e",
+                      "tertiary-container": "#420042",
+                      "surface-container-lowest": "#ffffff",
+                      "primary": "#00003c",
+                      "secondary-fixed": "#e0e0ff",
+                      "secondary-container": "#080cff",
+                      "outline-variant": "#c6c5d5",
+                      "background": "#faf9f9",
+                      "surface-variant": "#e3e2e2",
+                      "secondary": "#0001c0",
+                      "on-error": "#ffffff",
+                      "on-secondary-fixed-variant": "#0000ef",
+                      "on-error-container": "#93000a",
+                      "on-secondary": "#ffffff",
+                      "surface": "#faf9f9",
+                      "primary-fixed-dim": "#bfc2ff",
+                      "on-tertiary": "#ffffff",
+                      "surface-dim": "#dadada",
+                      "on-primary-fixed-variant": "#3239a3",
+                      "on-secondary-container": "#b6baff",
+                      "on-surface": "#1a1c1c",
+                      "surface-container-low": "#f4f3f3",
+                      "tertiary-fixed": "#ffd7f5",
+                      "on-tertiary-fixed-variant": "#810181",
+                      "on-surface-variant": "#464653",
+                      "on-tertiary-fixed": "#380038"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0px",
+                      "lg": "0px",
+                      "xl": "0px",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": ["Space Grotesk"],
+                      "body": ["Inter"],
+                      "label": ["Inter"],
+                      "mono": ["Courier New"]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        body {
+            background-color: #C0C0C0;
+            background-image: 
+                linear-gradient(45deg, #b8b8b8 25%, transparent 25%), 
+                linear-gradient(-45deg, #b8b8b8 25%, transparent 25%), 
+                linear-gradient(45deg, transparent 75%, #b8b8b8 75%), 
+                linear-gradient(-45deg, transparent 75%, #b8b8b8 75%);
+            background-size: 4px 4px;
+            background-position: 0 0, 0 2px, 2px -2px, -2px 0px;
+        }
+
+        .rainbow-text {
+            background: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(2px 2px #000);
+        }
+
+        .bevel-outset {
+            border-top: 2px solid #FFFFFF;
+            border-left: 2px solid #FFFFFF;
+            border-bottom: 2px solid #808080;
+            border-right: 2px solid #808080;
+        }
+
+        .bevel-inset {
+            border-top: 2px solid #808080;
+            border-left: 2px solid #808080;
+            border-bottom: 2px solid #FFFFFF;
+            border-right: 2px solid #FFFFFF;
+        }
+
+        .hazard-stripe {
+            background: repeating-linear-gradient(
+                45deg,
+                #fbbf24,
+                #fbbf24 20px,
+                #000000 20px,
+                #000000 40px
+            );
+        }
+
+        marquee {
+            font-family: 'Courier New', monospace;
+            background: #000;
+            color: #0f0;
+            padding: 4px 0;
+            border: 2px solid #808080;
+        }
+
+        .pixel-shadow {
+            box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+        }
+
+        .dotted-focus:focus {
+            outline: 1px dotted #000;
+            outline-offset: -4px;
+        }
+    </style>
+</head>
+<body class="min-h-screen text-on-surface font-body">
+<!-- TopNavBar -->
+<header class="bg-[#C0C0C0] border-t-[#FFFFFF] border-l-[#FFFFFF] border-b-[#808080] border-r-[#808080] border-2 flex items-center justify-between px-1 py-0.5 w-full shadow-[inset_1px_1px_#dfdfdf,1px_1px_#000000] sticky top-0 z-50">
+<div class="flex items-center gap-2">
+<div class="text-[#FFFFFF] bg-gradient-to-r from-[#000080] to-[#1084D0] px-2 py-0.5 italic font-black font-headline text-sm uppercase">
+                MY_PROJECT.EXE
+            </div>
+<nav class="hidden md:flex gap-4 px-2">
+<a class="text-[#000000] underline font-headline font-bold text-sm uppercase hover:bg-[#000080] hover:text-[#FFFFFF] active:translate-x-[1px] active:translate-y-[1px]" href="#">File</a>
+<a class="text-[#000000] font-headline font-bold text-sm uppercase hover:bg-[#000080] hover:text-[#FFFFFF] active:translate-x-[1px] active:translate-y-[1px]" href="#">Edit</a>
+<a class="text-[#000000] font-headline font-bold text-sm uppercase hover:bg-[#000080] hover:text-[#FFFFFF] active:translate-x-[1px] active:translate-y-[1px]" href="#">View</a>
+<a class="text-[#000000] font-headline font-bold text-sm uppercase hover:bg-[#000080] hover:text-[#FFFFFF] active:translate-x-[1px] active:translate-y-[1px]" href="#">Help</a>
+</nav>
+</div>
+<div class="flex gap-1">
+<button class="bevel-outset bg-[#C0C0C0] p-0.5 px-1.5 hover:bg-[#000080] hover:text-white group active:bevel-inset">
+<span class="material-symbols-outlined text-xs">minimize</span>
+</button>
+<button class="bevel-outset bg-[#C0C0C0] p-0.5 px-1.5 hover:bg-[#000080] hover:text-white group active:bevel-inset">
+<span class="material-symbols-outlined text-xs">fullscreen</span>
+</button>
+<button class="bevel-outset bg-[#C0C0C0] p-0.5 px-1.5 hover:bg-red-600 hover:text-white group active:bevel-inset">
+<span class="material-symbols-outlined text-xs font-bold">close</span>
+</button>
+</div>
+</header>
+<main class="max-w-6xl mx-auto px-4 pt-12 pb-24 space-y-24">
+<!-- Hero Section -->
+<section class="flex flex-col items-center text-center space-y-8">
+<div class="relative">
+<h1 class="rainbow-text text-6xl md:text-9xl font-black font-headline tracking-tighter uppercase mb-4">
+                    WELCOME TO THE FUTURE
+                </h1>
+<div class="absolute -top-6 -right-6 md:-right-12 transform rotate-12">
+<div class="bg-yellow-400 border-2 border-black px-4 py-2 font-black italic shadow-[4px_4px_0px_black] text-black">
+                        NEW! 1997
+                    </div>
+</div>
+</div>
+<div class="w-full max-w-2xl">
+<marquee scrollamount="10">UNDER CONSTRUCTION - SINCE 1997 - OPTIMIZED FOR NETSCAPE NAVIGATOR - BEST VIEWED AT 800x600 - NO JAVA SCRIPT REQUIRED!</marquee>
+</div>
+<div class="flex gap-6">
+<button class="bevel-outset bg-[#C0C0C0] px-8 py-4 font-black font-headline text-2xl hover:bg-[#000080] hover:text-white transition-none active:bevel-inset active:translate-x-[1px] active:translate-y-[1px] dotted-focus">
+                    EXPLORE NOW
+                </button>
+</div>
+</section>
+<!-- Main Feature: Windows Card -->
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="bevel-outset bg-[#C0C0C0] p-1 shadow-2xl">
+<div class="bg-gradient-to-r from-[#000080] to-[#1084D0] px-3 py-1 flex items-center justify-between text-white font-bold font-headline">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">language</span>
+<span>THE WORLD WIDE WEB</span>
+</div>
+<div class="flex gap-1">
+<button class="bevel-outset bg-[#C0C0C0] text-black px-1.5 h-5 flex items-center justify-center text-[10px] active:bevel-inset">?</button>
+<button class="bevel-outset bg-[#C0C0C0] text-black px-1.5 h-5 flex items-center justify-center text-[10px] active:bevel-inset">X</button>
+</div>
+</div>
+<div class="bevel-inset bg-white p-6 m-1 space-y-4 min-h-[300px]">
+<img class="w-full h-48 object-cover bevel-inset grayscale" data-alt="vintage 90s personal computer station with beige monitor and messy cables in a dimly lit bedroom setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRZtj_kVWE_7VAKExiNtLu2GUDlQUvdrVh5Jp9RdpgOAvVzzyU5ZMiSWCAPfL75Dc5rkYadzdDBMwiXNE27S7F5JvLZCvBqW91_JA_qrCgcqwBkpC1w376M1JGVFVqPUE05jxsvUdh9zl9OjffTyVKkbA8zRjXpDxFqiZ71DpTg5WeFcrCSt6K_B4L6aeJ0jk-CWJCGBmWYX-0tW97X39lhBBL48h9AwIE_FpHb9oTqXxOjFwtbfqJIpo7ywiBHN1N10HOdgkmzdPp"/>
+<p class="text-black font-body leading-relaxed">
+                        The early web was a frontier of static HTML and dial-up tones. We invite you to step back into a time where <span class="text-[#0000ff] underline cursor-pointer">hyperlinks</span> were blue and the future was written in 16 colors.
+                    </p>
+<div class="p-2 border-2 border-dotted border-gray-400 font-mono text-xs text-gray-600 bg-gray-50">
+                        File transfer protocol: 98% complete...
+                    </div>
+</div>
+</div>
+<div class="space-y-6">
+<h2 class="text-4xl font-black font-headline uppercase leading-none border-l-8 border-[#000080] pl-4">Digital Pioneers</h2>
+<p class="text-lg">Experience the raw power of early networking. No algorithms, no tracking, just pure information at the speed of 56k bandwidth.</p>
+<div class="grid grid-cols-2 gap-4">
+<div class="bevel-inset bg-white p-4 font-mono text-xs">
+<div class="font-bold mb-2">SYSTEM_LOG:</div>
+                        &gt; TCP/IP CONNECTED<br/>
+                        &gt; SYNCING... OK
+                    </div>
+<div class="bevel-inset bg-white p-4 font-mono text-xs">
+<div class="font-bold mb-2">USER_AUTH:</div>
+                        &gt; ADMIN ACCESS<br/>
+                        &gt; WELCOME BACK
+                    </div>
+</div>
+</div>
+</section>
+<!-- Services Grid: HTML Table Style -->
+<section class="space-y-8">
+<h2 class="text-3xl font-black font-headline text-center uppercase tracking-widest">Available Services</h2>
+<div class="overflow-x-auto">
+<table class="w-full border-collapse border-4 border-black text-left font-headline">
+<thead>
+<tr class="bg-black text-white">
+<th class="p-4 border-2 border-black uppercase italic">ID#</th>
+<th class="p-4 border-2 border-black uppercase italic">Service Name</th>
+<th class="p-4 border-2 border-black uppercase italic">Efficiency</th>
+</tr>
+</thead>
+<tbody>
+<tr class="bg-white hover:bg-blue-100 transition-none">
+<td class="p-4 border-2 border-black font-mono">001</td>
+<td class="p-4 border-2 border-black font-bold">Web Hosting (5MB Free)</td>
+<td class="p-4 border-2 border-black text-[#0000ff] underline">MAXIMAL</td>
+</tr>
+<tr class="bg-[#E8E8E8] hover:bg-blue-100 transition-none">
+<td class="p-4 border-2 border-black font-mono">002</td>
+<td class="p-4 border-2 border-black font-bold">Email Auto-Responder</td>
+<td class="p-4 border-2 border-black text-[#0000ff] underline">OPTIMAL</td>
+</tr>
+<tr class="bg-white hover:bg-blue-100 transition-none">
+<td class="p-4 border-2 border-black font-mono">003</td>
+<td class="p-4 border-2 border-black font-bold">Search Engine Indexing</td>
+<td class="p-4 border-2 border-black text-[#0000ff] underline">GIGANTIC</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Stats Section: Hit Counter -->
+<section class="flex flex-col items-center gap-6 py-12">
+<div class="bg-black p-6 bevel-inset shadow-[0_0_20px_rgba(0,255,0,0.2)]">
+<div class="text-center mb-2 font-mono text-xs text-gray-500">GLOBAL VISIT COUNTER</div>
+<div class="font-mono text-5xl md:text-7xl text-[#00FF00] tracking-widest leading-none" style="text-shadow: 0 0 10px #00FF00;">
+                    VISITORS: 0005432
+                </div>
+</div>
+<p class="font-mono text-xs uppercase text-gray-600 animate-pulse">Scanning ports... Security level: High</p>
+</section>
+<!-- CTA: Construction Zone -->
+<section class="hazard-stripe p-2 shadow-2xl">
+<div class="bg-[#C0C0C0] p-12 bevel-outset flex flex-col items-center text-center space-y-6">
+<h3 class="text-5xl font-black font-headline text-black uppercase">SIGN UP NOW!</h3>
+<p class="max-w-md font-bold italic">Join over 1,000 members in the premier digital community of the millennium.</p>
+<div class="w-full max-w-sm">
+<div class="bevel-inset bg-white p-1 flex">
+<input class="bg-transparent border-none w-full focus:ring-0 font-mono p-4 text-black uppercase placeholder:text-gray-400" placeholder="YOUR@EMAIL.COM" type="email"/>
+<button class="bevel-outset bg-[#C0C0C0] px-6 font-black font-headline hover:bg-[#000080] hover:text-white active:bevel-inset active:translate-x-[1px] active:translate-y-[1px]">GO!</button>
+</div>
+</div>
+<div class="flex items-center gap-4 mt-8">
+<img class="w-16 h-16 grayscale" data-alt="pixelated cartoon icon of a generic animated 90s gif construction worker" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAU-QAUYaTcJk4KZb9gb52bDFY2K_MwXTkjoCAo0zBHd-7CYTs2aVI42yU6uyyitIaZLgqI2RQjDKGQUO-F7eTkkzjMgQyO94oO5ndjDXyZIZOFzyDWCGPvnwjedT1-K0PkOmZ6TXQNzV7eFel74tZ3dFx0HT3-KqC2LU53wE2voGxdEozjK5rO8t0eeF5LwKP1B4ouOiQdF1kQCb2HAUARnbBtu9UwwSR-7MKbqmtlYrBQQrFI22RE8DGb5XoVuU1Zpc68hmjLxEQ8"/>
+<span class="text-xs font-mono max-w-[200px]">THIS SITE IS BEST VIEWED WITH MOUSE CURSOR OVER 1.0 SPEED</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer / Start Bar -->
+<footer class="bg-[#C0C0C0] fixed bottom-0 w-full h-12 border-t-2 border-t-[#FFFFFF] shadow-[0_-1px_#808080] flex justify-between items-center px-1 z-50">
+<div class="flex items-center gap-1 h-full py-1">
+<button class="bg-[#C0C0C0] border-t-[#FFFFFF] border-l-[#FFFFFF] border-b-[#808080] border-r-[#808080] border-2 px-3 flex items-center gap-2 h-full active:bevel-inset font-bold text-black font-headline active:shadow-inner hover:border-dotted hover:border-black">
+<img class="w-5 h-5 grayscale" data-alt="ultra-low resolution pixel art icon of a classic 1990s computer desktop logo" src=""/>
+                Start
+            </button>
+<div class="h-full w-px bg-gray-400 mx-1"></div>
+<div class="bg-[#C0C0C0] border-t-[#808080] border-l-[#808080] border-b-[#FFFFFF] border-r-[#FFFFFF] border-2 px-4 h-full flex items-center font-bold text-xs font-mono shadow-inner bg-surface-container-high">
+                Welcome_Guest.exe
+            </div>
+</div>
+<div class="flex items-center gap-2 h-full py-1">
+<div class="h-full w-px bg-gray-400 mx-1"></div>
+<div class="bg-[#C0C0C0] border-t-[#808080] border-l-[#808080] border-b-[#FFFFFF] border-r-[#FFFFFF] border-2 px-3 h-full flex items-center gap-2 font-mono text-xs font-bold shadow-inner">
+<span class="material-symbols-outlined text-sm">schedule</span>
+                12:00 PM
+            </div>
+<div class="hidden md:block text-[#000000] font-mono font-bold text-[10px] pr-4">
+                © 1995 NOSTALGIA CORP
+            </div>
+</div>
+</footer>
+<!-- Decorative Corner Element -->
+<div class="fixed bottom-16 right-6 z-40">
+<div class="bevel-outset bg-[#C0C0C0] p-2 flex flex-col items-center gap-2">
+<img class="w-12 h-12 bevel-inset grayscale" data-alt="a stack of floppy disks with handwritten labels on a silver background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAW3_gnQh2oaqwbc7LSHf-H8wdQ84fEkECCcxCqosi6GcpJpiYfh_hIuEqtxdQXT6fXHAWFsvWT77uQ9r93bExoZN83QAcfFeGnRnd7tvnWVhkhRrOfZbnr527CqjFT-oXbaQr9Ha0Nz5dvRvX_xt0legiqVx6QJ4yMIefBs-pl77UecOiQajciXchBbINn3N2buHLFXIGML4Q31j82PtzPlLib7pF1GwziPtcgMBKl7DZFwahJ9JsA-DwqMHEH4wEoTnPcT4li8DOb"/>
+<div class="text-[8px] font-mono leading-tight text-center">FLOPPY_DRIVE<br/>(A:)</div>
+</div>
+</div>
+</body></html>
